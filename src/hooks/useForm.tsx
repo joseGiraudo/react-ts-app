@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react';
 
-
+// el useForm extiende el tipo de dato que le pase, para poder reutilizarlo en otros forms
 export const useForm = <T extends Object>( initialState: T ) => {
     
     const [formulario, setFormulario] = useState(initialState);

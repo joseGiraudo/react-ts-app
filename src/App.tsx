@@ -27,6 +27,8 @@ function App() {
       <hr />
       <ContadorReducer />
       <br/>
+      <br />
+      <br />
 
       <h2>Custom Hooks</h2>
       <hr />

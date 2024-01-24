@@ -8,10 +8,9 @@ type ActionType =
     | { type: 'incrementar' }
     | { type: 'decrementar' }
     | { type: 'reset' }
-    | { type: 'custom', payload: number }
+    | { type: 'custom', payload: number } // obligo a que el custom tenga un payload
 
 const contadorReducer = ( state: typeof initialState, action: ActionType ) => {
-
     switch( action.type ) {
         case 'incrementar':
             return {
@@ -66,6 +65,10 @@ export const ContadorReducer = () => {
                 className="btn btn-primary"
                 onClick={() => dispatch({ type: 'custom', payload: 100})}
             > 100 </button>
+            <button
+                className="btn btn-primary"
+                onClick={() => dispatch({ type: 'custom', payload: 70})}
+            > 70 </button>
         </>
     )
 }
